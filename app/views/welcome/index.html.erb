@@ -1,0 +1,12 @@
+<h1>Welcome</h1>
+
+<% @posts.each do |post| %>
+  <%= link_to post.title, post %>
+  <br>
+  <%= post.created_at.strftime("%A, %b %d") %>
+  <br>
+  <br>
+  <br>
+<% end %>  
+
+<%= will_paginate @posts %>
